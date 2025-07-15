@@ -3,4 +3,4 @@
 @tailwind utilities;
 
 /* === FORCE SCROLL === */
-html, body { overflow-y: auto !important; }
+html, body { overflow: hidden; height: 100vh; }
