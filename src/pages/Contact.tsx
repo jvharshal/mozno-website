@@ -17,11 +17,10 @@ const Contact = () => {
     setFormData({ name: '', email: '', phone: '', service: '', message: '' });
   };
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
+  ) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   return (
@@ -34,7 +33,7 @@ const Contact = () => {
               Get in Touch
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Ready to take control of your financial future? Contact our expert advisors for 
+              Ready to take control of your financial future? Contact our expert advisors for
               personalized guidance and solutions tailored to your needs.
             </p>
           </div>
@@ -47,10 +46,8 @@ const Contact = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Information */}
             <div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-8">
-                Contact Information
-              </h2>
-              
+              <h2 className="text-3xl font-bold text-gray-900 mb-8">Contact Information</h2>
+
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
                   <div className="bg-green-100 p-3 rounded-full">
@@ -58,7 +55,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-1">Phone</h3>
-                    <p className="text-gray-600">+91 98765 43210</p>
+                    <p className="text-gray-600">+91 98205 07696</p>
                     <p className="text-sm text-gray-500">Mon-Sat, 9:00 AM - 7:00 PM</p>
                   </div>
                 </div>
@@ -69,7 +66,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-1">Email</h3>
-                    <p className="text-gray-600">info@moznoadvisory.com</p>
+                    <p className="text-gray-600">ceo@mozno.in</p>
                     <p className="text-sm text-gray-500">We'll respond within 24 hours</p>
                   </div>
                 </div>
@@ -81,9 +78,9 @@ const Contact = () => {
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-1">Office Address</h3>
                     <p className="text-gray-600">
-                      Office No. 123, Business Center,<br />
-                      Andheri East, Mumbai - 400069<br />
-                      Maharashtra, India
+                      106, Shyamkamal 'C' Building,<br />
+                      Agarwal Market, Vile Parle (E),<br />
+                      Mumbai - 400 057.
                     </p>
                   </div>
                 </div>
@@ -94,9 +91,9 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-1">WhatsApp</h3>
-                    <p className="text-gray-600">+91 98765 43210</p>
+                    <p className="text-gray-600">+91 98205 07696</p>
                     <a
-                      href="https://wa.me/919876543210"
+                      href="https://wa.me/919820507696"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-green-600 hover:text-green-700 text-sm"
@@ -127,7 +124,7 @@ const Contact = () => {
               <h2 className="text-3xl font-bold text-gray-900 mb-8">
                 Book Your Free Consultation
               </h2>
-              
+
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
@@ -194,7 +191,7 @@ const Contact = () => {
                     <option value="tax-planning">Tax Planning</option>
                     <option value="insurance-planning">Insurance Planning</option>
                     <option value="borrowing-solutions">Borrowing Solutions</option>
-                    <option value="Others">Others</option>
+                    <option value="others">Others</option>
                   </select>
                 </div>
 
@@ -229,18 +226,12 @@ const Contact = () => {
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Visit Our Office
-            </h2>
-            <p className="text-xl text-gray-600">
-              Located in the heart of Mumbai's business district
-            </p>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Visit Our Office</h2>
+            <p className="text-xl text-gray-600">Located in the heart of Mumbai's business district</p>
           </div>
-          
+
           <div className="bg-gray-300 rounded-xl h-96 flex items-center justify-center">
-            <p className="text-gray-600 text-lg">
-              Interactive Google Map will be embedded here
-            </p>
+            <p className="text-gray-600 text-lg">Interactive Google Map will be embedded here</p>
           </div>
         </div>
       </section>
