@@ -3,25 +3,25 @@ import { Phone, Mail, MapPin, Facebook, Twitter, Linkedin, Instagram, Youtube } 
 
 const Footer = () => {
   const services = [
-    'Wealth Management',
-    'Financial Planning',
-    'Tax Planning',
-    'Insurance Planning',
-    'Borrowing Solutions'
+    { name: 'Wealth Management', href: '#/services/wealth-management' },
+    { name: 'Financial Planning', href: '#/services/financial-planning' },
+    { name: 'Tax Planning', href: '#/services/tax-planning' },
+    { name: 'Insurance Planning', href: '#/services/insurance-planning' },
+    { name: 'Borrowing Solutions', href: '#/services/borrowing-solutions' }
   ];
 
   const quickLinks = [
-    { name: 'About Us', href: '/about' },
-    { name: 'Partners', href: '/partners' },
-    { name: 'Blog', href: '/blog' },
-    { name: 'Videos', href: '/videos' },
-    { name: 'Contact', href: '/contact' }
+    { name: 'About Us', href: '#/about' },
+    { name: 'Partners', href: '#/partners' },
+    { name: 'Blog', href: '#/blog' },
+    { name: 'Videos', href: '#/videos' },
+    { name: 'Contact', href: '#/contact' }
   ];
 
   const legalLinks = [
-    { name: 'Privacy Policy', href: '/privacy-policy' },
-    { name: 'Disclaimer', href: '/disclaimer' },
-    { name: 'Terms & Conditions', href: '/terms-conditions' }
+    { name: 'Privacy Policy', href: '#/privacy-policy' },
+    { name: 'Disclaimer', href: '#/disclaimer' },
+    { name: 'Terms & Conditions', href: '#/terms-conditions' }
   ];
 
   return (
@@ -31,13 +31,15 @@ const Footer = () => {
           {/* Company Info */}
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-3 mb-6">
-              <img 
-                src="/Mozno Advisory Logo Mew.png" 
-                alt="Mozno Advisory Logo" 
+              <img
+                src="/logo-m.png"
+                alt="Mozno Advisory Logo"
                 className="h-12 w-auto object-contain"
                 onError={(e) => {
                   e.currentTarget.style.display = 'none';
-                  e.currentTarget.nextElementSibling.style.display = 'block';
+                  if (e.currentTarget.nextElementSibling) {
+                    (e.currentTarget.nextElementSibling as HTMLElement).style.display = 'block';
+                  }
                 }}
               />
               <div className="hidden">
@@ -51,10 +53,10 @@ const Footer = () => {
               </div>
             </div>
             <p className="text-gray-300 mb-6 leading-relaxed">
-              Founded by CA Harshal Jain, Mozno Advisory simplifies your financial journey with 
+              Founded by CA Harshal Jain, Mozno Advisory simplifies your financial journey with
               expert guidance in wealth management, tax planning, and comprehensive financial solutions.
             </p>
-            
+
             {/* Social Links */}
             <div className="flex space-x-4">
               <a href="#" className="text-gray-400 hover:text-green-400 transition-colors">
@@ -80,9 +82,9 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-6">Our Services</h3>
             <ul className="space-y-3">
               {services.map((service) => (
-                <li key={service}>
-                  <a href="#" className="text-gray-300 hover:text-green-400 transition-colors">
-                    {service}
+                <li key={service.name}>
+                  <a href={service.href} className="text-gray-300 hover:text-green-400 transition-colors">
+                    {service.name}
                   </a>
                 </li>
               ))}
@@ -115,17 +117,17 @@ const Footer = () => {
                   <p>Mumbai - 400 057.</p>
                 </div>
               </div>
-              
+
               <div className="flex items-center space-x-3">
                 <Phone className="h-5 w-5 text-green-400 flex-shrink-0" />
-                <a href="tel:+919876543210" className="text-gray-300 hover:text-green-400 transition-colors">
+                <a href="tel:+919820507696" className="text-gray-300 hover:text-green-400 transition-colors">
                   +91 98205 07696
                 </a>
               </div>
-              
+
               <div className="flex items-center space-x-3">
                 <Mail className="h-5 w-5 text-green-400 flex-shrink-0" />
-                <a href="mailto:info@moznoadvisory.com" className="text-gray-300 hover:text-green-400 transition-colors">
+                <a href="mailto:ceo@mozno.in" className="text-gray-300 hover:text-green-400 transition-colors">
                   ceo@mozno.in
                 </a>
               </div>
@@ -139,7 +141,7 @@ const Footer = () => {
             <div className="text-gray-400 text-sm mb-4 md:mb-0">
               © 2024 Mozno Advisory. All rights reserved.
             </div>
-            
+
             <div className="flex flex-wrap gap-6">
               {legalLinks.map((link) => (
                 <a
@@ -152,7 +154,7 @@ const Footer = () => {
               ))}
             </div>
           </div>
-          
+
           <div className="mt-6 text-center text-gray-500 text-sm">
             <p>Investment in securities is subject to market risk. Please read all scheme related documents carefully.</p>
           </div>
