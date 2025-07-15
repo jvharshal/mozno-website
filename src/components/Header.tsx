@@ -21,7 +21,7 @@ const Header = () => {
           <div className="flex items-center">
             <a href="#/" className="flex items-center space-x-3">
               <img
-                src="/logo-new.png"
+                src="/dist/Mozno Advisory Logo New.png"
                 alt="Mozno Advisory Logo"
                 className="h-12 w-auto object-contain"
                 onError={(e) => {
