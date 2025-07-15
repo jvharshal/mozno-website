@@ -194,6 +194,7 @@ const Contact = () => {
                     <option value="tax-planning">Tax Planning</option>
                     <option value="insurance-planning">Insurance Planning</option>
                     <option value="borrowing-solutions">Borrowing Solutions</option>
+                    <option value="Others">Others</option>
                   </select>
                 </div>
 
