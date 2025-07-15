@@ -6,11 +6,11 @@ const Header = () => {
   const [isServicesOpen, setIsServicesOpen] = useState(false);
 
   const services = [
-    { name: 'Wealth Management', href: '/services/wealth-management' },
-    { name: 'Financial Planning', href: '/services/financial-planning' },
-    { name: 'Tax Planning', href: '/services/tax-planning' },
-    { name: 'Insurance Planning', href: '/services/insurance-planning' },
-    { name: 'Borrowing Solutions', href: '/services/borrowing-solutions' }
+    { name: 'Wealth Management', href: '#/services/wealth-management' },
+    { name: 'Financial Planning', href: '#/services/financial-planning' },
+    { name: 'Tax Planning', href: '#/services/tax-planning' },
+    { name: 'Insurance Planning', href: '#/services/insurance-planning' },
+    { name: 'Borrowing Solutions', href: '#/services/borrowing-solutions' }
   ];
 
   return (
@@ -19,14 +19,16 @@ const Header = () => {
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
           <div className="flex items-center">
-            <a href="/" className="flex items-center space-x-3">
-              <img 
-                src="/Mozno Advisory Logo New.png" 
-                alt="Mozno Advisory Logo" 
+            <a href="#/" className="flex items-center space-x-3">
+              <img
+                src="/logo-new.png"
+                alt="Mozno Advisory Logo"
                 className="h-12 w-auto object-contain"
                 onError={(e) => {
                   e.currentTarget.style.display = 'none';
-                  e.currentTarget.nextElementSibling.style.display = 'block';
+                  if (e.currentTarget.nextElementSibling) {
+                    (e.currentTarget.nextElementSibling as HTMLElement).style.display = 'block';
+                  }
                 }}
               />
               <div className="hidden">
@@ -43,13 +45,13 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-8">
-            <a href="/" className="text-gray-700 hover:text-green-600 font-medium transition-colors">
+            <a href="#/" className="text-gray-700 hover:text-green-600 font-medium transition-colors">
               Home
             </a>
-            <a href="/about" className="text-gray-700 hover:text-green-600 font-medium transition-colors">
+            <a href="#/about" className="text-gray-700 hover:text-green-600 font-medium transition-colors">
               About
             </a>
-            
+
             {/* Services Dropdown */}
             <div className="relative">
               <button
@@ -60,7 +62,7 @@ const Header = () => {
                 Services
                 <ChevronDown className="ml-1 h-4 w-4" />
               </button>
-              
+
               {isServicesOpen && (
                 <div
                   className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl border border-gray-200 py-2"
@@ -80,21 +82,21 @@ const Header = () => {
               )}
             </div>
 
-            <a href="/partners" className="text-gray-700 hover:text-green-600 font-medium transition-colors">
+            <a href="#/partners" className="text-gray-700 hover:text-green-600 font-medium transition-colors">
               Partners
             </a>
-            <a href="/blog" className="text-gray-700 hover:text-green-600 font-medium transition-colors">
+            <a href="#/blog" className="text-gray-700 hover:text-green-600 font-medium transition-colors">
               Blog
             </a>
-            <a href="/videos" className="text-gray-700 hover:text-green-600 font-medium transition-colors">
+            <a href="#/videos" className="text-gray-700 hover:text-green-600 font-medium transition-colors">
               Videos
             </a>
-            <a href="/contact" className="text-gray-700 hover:text-green-600 font-medium transition-colors">
+            <a href="#/contact" className="text-gray-700 hover:text-green-600 font-medium transition-colors">
               Contact
             </a>
-            
+
             <a
-              href="/contact"
+              href="#/contact"
               className="bg-teal-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-teal-700 transition-colors"
             >
               Book Free Consultation
@@ -116,13 +118,13 @@ const Header = () => {
         {isMenuOpen && (
           <div className="lg:hidden border-t border-gray-200 py-4">
             <div className="flex flex-col space-y-4">
-              <a href="/" className="text-gray-700 hover:text-green-600 font-medium">
+              <a href="#/" className="text-gray-700 hover:text-green-600 font-medium">
                 Home
               </a>
-              <a href="/about" className="text-gray-700 hover:text-green-600 font-medium">
+              <a href="#/about" className="text-gray-700 hover:text-green-600 font-medium">
                 About
               </a>
-              
+
               <div>
                 <div className="text-gray-700 font-medium mb-2">Services</div>
                 <div className="pl-4 space-y-2">
@@ -137,22 +139,22 @@ const Header = () => {
                   ))}
                 </div>
               </div>
-              
-              <a href="/partners" className="text-gray-700 hover:text-green-600 font-medium">
+
+              <a href="#/partners" className="text-gray-700 hover:text-green-600 font-medium">
                 Partners
               </a>
-              <a href="/blog" className="text-gray-700 hover:text-green-600 font-medium">
+              <a href="#/blog" className="text-gray-700 hover:text-green-600 font-medium">
                 Blog
               </a>
-              <a href="/videos" className="text-gray-700 hover:text-green-600 font-medium">
+              <a href="#/videos" className="text-gray-700 hover:text-green-600 font-medium">
                 Videos
               </a>
-              <a href="/contact" className="text-gray-700 hover:text-green-600 font-medium">
+              <a href="#/contact" className="text-gray-700 hover:text-green-600 font-medium">
                 Contact
               </a>
-              
+
               <a
-                href="/contact"
+                href="#/contact"
                 className="bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors text-center"
               >
                 Book Free Consultation
