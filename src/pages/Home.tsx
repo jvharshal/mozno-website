@@ -143,7 +143,7 @@ const Home = () => {
                 <span className="text-teal-600">financial needs</span>
               </h1>
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-                Founded by Harshal Jain, CA, we simplify your financial journey with expert guidance 
+                Founded by CA Harshal Jain, we simplify your financial journey with expert guidance 
                 in wealth management, tax planning, and comprehensive financial solutions.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
@@ -157,7 +157,7 @@ const Home = () => {
                   href="tel:+919876543210"
                   className="border-2 border-teal-600 text-teal-600 px-8 py-4 rounded-lg font-semibold hover:bg-teal-600 hover:text-white transition-colors text-center"
                 >
-                  Call: +91 98765 43210
+                  Call: +91 98205 07696
                 </a>
               </div>
             </div>
