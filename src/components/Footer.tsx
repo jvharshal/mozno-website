@@ -32,7 +32,7 @@ const Footer = () => {
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-3 mb-6">
               <img 
-                src="/Mozno Advisory (Print File)2.png" 
+                src="/Mozno Advisory Logo Mew.png" 
                 alt="Mozno Advisory Logo" 
                 className="h-12 w-auto object-contain"
                 onError={(e) => {
@@ -51,7 +51,7 @@ const Footer = () => {
               </div>
             </div>
             <p className="text-gray-300 mb-6 leading-relaxed">
-              Founded by Harshal Jain, CA, Mozno Advisory simplifies your financial journey with 
+              Founded by CA Harshal Jain, Mozno Advisory simplifies your financial journey with 
               expert guidance in wealth management, tax planning, and comprehensive financial solutions.
             </p>
             
@@ -110,23 +110,23 @@ const Footer = () => {
               <div className="flex items-start space-x-3">
                 <MapPin className="h-5 w-5 text-green-400 mt-1 flex-shrink-0" />
                 <div className="text-gray-300">
-                  <p>Office No. 123, Business Center,</p>
-                  <p>Andheri East, Mumbai - 400069</p>
-                  <p>Maharashtra, India</p>
+                  <p>106, Shyamkamal 'C' Building,</p>
+                  <p>Agarwal Market, Vile Parle (E),</p>
+                  <p>Mumbai - 400 057.</p>
                 </div>
               </div>
               
               <div className="flex items-center space-x-3">
                 <Phone className="h-5 w-5 text-green-400 flex-shrink-0" />
                 <a href="tel:+919876543210" className="text-gray-300 hover:text-green-400 transition-colors">
-                  +91 98765 43210
+                  +91 98205 07696
                 </a>
               </div>
               
               <div className="flex items-center space-x-3">
                 <Mail className="h-5 w-5 text-green-400 flex-shrink-0" />
                 <a href="mailto:info@moznoadvisory.com" className="text-gray-300 hover:text-green-400 transition-colors">
-                  info@moznoadvisory.com
+                  ceo@mozno.in
                 </a>
               </div>
             </div>
@@ -155,7 +155,6 @@ const Footer = () => {
           
           <div className="mt-6 text-center text-gray-500 text-sm">
             <p>Investment in securities is subject to market risk. Please read all scheme related documents carefully.</p>
-            <p className="mt-2">Mozno Advisory is a SEBI registered investment advisor.</p>
           </div>
         </div>
       </div>
