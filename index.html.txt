@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Mozno Advisory – One-stop house for all your financial needs</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Chartered Accountant Harshal Jain offers expert wealth management, tax planning, insurance advisory & borrowing solutions. Book a free consultation today." />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="canonical" href="https://mozno.in" />
+
+  <!-- Favicon package (exactly as favicon generator produced) -->
+  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="Mozno Advisory" />
+  <link rel="manifest" href="/site.webmanifest" />
+
+  <!-- OpenGraph / Social -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:title"       content="Mozno Advisory – One-stop house for all your financial needs" />
+  <meta property="og:description" content="Chartered Accountant Harshal Jain offers expert wealth management, tax planning, insurance advisory & borrowing solutions. Book a free consultation today." />
+  <meta property="og:url"         content="https://mozno.in" />
+  <meta property="og:image"       content="https://mozno.in/img/og-card.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:site_name"   content="Mozno Advisory" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="Mozno Advisory – One-stop house for all your financial needs" />
+  <meta name="twitter:description" content="Chartered Accountant Harshal Jain offers expert wealth management, tax planning, insurance advisory & borrowing solutions." />
+  <meta name="twitter:image"       content="https://mozno.in/img/og-card.png" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/mozno.css" />
+
+  <!-- 3-D pre-loader styles -->
+  <style>
+    #loader-3d{position:fixed;inset:0;background:#fff;display:flex;align-items:center;justify-content:center;z-index:9999}
+    #loader-3d canvas{width:200px;height:200px}
+  </style>
+</head>
+
+<body>
+  <!-- 3-D LOADER -->
+  <div id="loader-3d"><canvas id="lc"></canvas></div>
+
+  <!-- NAV -->
+  <nav>
+    <a class="brand" href="/">
+      <img src="img/logo-icon.png" alt="Mozno" style="height:40px" />
+      <span>Mozno Advisory</span>
+    </a>
+    <ul>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a class="btn" href="#consult">Book Free Consultation</a>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>One-stop house for all your&nbsp;financial&nbsp;needs</h1>
+    <p>Chartered Accountant Harshal Jain & team craft personalised strategies so you can live without money worries.</p>
+    <a class="btn large" href="#consult">Book Free Consultation</a>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services">
+    <h2>Our Services</h2>
+    <div class="cards">
+      <a class="card" href="services/wealth.html"><img src="https://img.icons8.com/fluency/96/stack-of-coins.png" alt="" /><h3>Wealth Management</h3></a>
+      <a class="card" href="services/financial.html"><img src="https://img.icons8.com/fluency/96/compass.png" alt="" /><h3>Financial Planning</h3></a>
+      <a class="card" href="services/tax.html"><img src="https://img.icons8.com/fluency/96/tax.png" alt="" /><h3>Tax Planning</h3></a>
+      <a class="card" href="services/insurance.html"><img src="https://img.icons8.com/fluency/96/umbrella.png" alt="" /><h3>Insurance Planning</h3></a>
+      <a class="card" href="services/borrowing.html"><img src="https://img.icons8.com/fluency/96/loan.png" alt="" /><h3>Borrowing Solutions</h3></a>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="consult">
+    <h2>Book Free Consultation</h2>
+    <form action="https://formspree.io/f/YOUR-ID" method="POST">
+      <input name="name" placeholder="Name" required />
+      <input type="email" name="email" placeholder="Email" required />
+      <input type="tel" name="phone" placeholder="Phone" required />
+      <select name="service">
+        <option>Wealth Management</option>
+        <option>Financial Planning</option>
+        <option>Tax Planning</option>
+        <option>Insurance Planning</option>
+        <option>Borrowing Solutions</option>
+      </select>
+      <textarea name="message" placeholder="Message"></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>&copy; 2024 Mozno Advisory</footer>
+
+  <!-- 3-D loader script -->
+  <script type="module">
+    import * as THREE from 'https://cdn.skypack.dev/three@0.155';
+    import { GLTFLoader } from 'https://cdn.skypack.dev/three@0.155/examples/jsm/loaders/GLTFLoader.js';
+
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(25, 1, 0.1, 1000);
+    const renderer = new THREE.WebGLRenderer({ alpha: true, canvas: document.getElementById('lc') });
+    renderer.setSize(200, 200);
+
+    const light = new THREE.DirectionalLight(0xffffff, 1);
+    light.position.set(1, 1, 1);
+    scene.add(light);
+
+    const loader = new GLTFLoader();
+    loader.load('/assets/mozno-logo-3d.glb', (gltf) => {
+      const model = gltf.scene;
+      scene.add(model);
+      camera.position.set(0, 0, 5);
+      function animate() {
+        requestAnimationFrame(animate);
+        model.rotation.y += 0.015;
+        renderer.render(scene, camera);
+      }
+      animate();
+      setTimeout(() => (document.getElementById('loader-3d').style.display = 'none'), 2800);
+    });
+  </script>
+</body>
+</html>
