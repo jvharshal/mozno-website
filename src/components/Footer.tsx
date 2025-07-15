@@ -32,7 +32,7 @@ const Footer = () => {
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-3 mb-6">
               <img
-                src="/logo-m.png"
+                src="/dist/Mozno Advisory Logo New.png"
                 alt="Mozno Advisory Logo"
                 className="h-12 w-auto object-contain"
                 onError={(e) => {
