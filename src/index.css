@@ -2,25 +2,5 @@
 @tailwind components;
 @tailwind utilities;
 
-/* 1. Force scroll */
-html, body {
-  overflow-y: scroll !important;
-  overflow-x: hidden;
-}
-
-/* 2. Remove any 100vh lock on body */
-body {
-  min-height: auto !important;
-  height: auto !important;
-}
-
-/* 3. Hide loader when done (JS will add .hide) */
-#loader-3d {
-  position: fixed;
-  inset: 0;
-  z-index: 9999;
-  pointer-events: none;
-}
-#loader-3d.hide {
-  display: none !important;
-}
+/* === FORCE SCROLL === */
+html, body { overflow-y: auto !important; }
