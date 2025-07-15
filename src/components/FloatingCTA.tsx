@@ -23,7 +23,14 @@ const FloatingCTA = () => {
       {isOpen && (
         <div className="mb-4 bg-white rounded-lg shadow-2xl border border-gray-200 p-4 w-64">
           <div className="flex justify-between items-center mb-4">
-            <h3 className="font-semibold text-gray-900">Talk to Our Advisor</h3>
+            <h3 className="font-semibold text-gray-900 flex items-center">
+              <img
+                src="/dist/Mozno Advisory Logo New.png"
+                alt="Logo"
+                className="h-6 w-auto mr-2 object-contain"
+              />
+              Talk to Our Advisor
+            </h3>
             <button
               onClick={() => setIsOpen(false)}
               className="text-gray-400 hover:text-gray-600"
@@ -31,7 +38,7 @@ const FloatingCTA = () => {
               <X className="h-4 w-4" />
             </button>
           </div>
-          
+
           <div className="space-y-3">
             <a
               href="tel:+919820507696"
@@ -40,12 +47,12 @@ const FloatingCTA = () => {
               <Phone className="h-5 w-5 text-teal-600" />
               <div>
                 <div className="font-medium text-gray-900">Call Now</div>
-                <div className="text-sm text-gray-600">+91 98765 43210</div>
+                <div className="text-sm text-gray-600">+91 98205 07696</div>
               </div>
             </a>
-            
+
             <a
-              href="mailto:info@moznoadvisory.com"
+              href="mailto:ceo@mozno.in"
               className="flex items-center space-x-3 p-3 rounded-lg bg-blue-50 hover:bg-blue-100 transition-colors"
             >
               <Mail className="h-5 w-5 text-blue-600" />
@@ -54,7 +61,7 @@ const FloatingCTA = () => {
                 <div className="text-sm text-gray-600">ceo@mozno.in</div>
               </div>
             </a>
-            
+
             <a
               href="https://wa.me/919820507696"
               target="_blank"
@@ -67,9 +74,9 @@ const FloatingCTA = () => {
                 <div className="text-sm text-gray-600">Quick Response</div>
               </div>
             </a>
-            
+
             <a
-              href="/contact"
+              href="#/contact"
               className="block w-full bg-teal-600 text-white text-center py-3 rounded-lg font-semibold hover:bg-teal-700 transition-colors"
             >
               Book Free Consultation
