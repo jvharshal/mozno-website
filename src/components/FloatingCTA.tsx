@@ -34,7 +34,7 @@ const FloatingCTA = () => {
           
           <div className="space-y-3">
             <a
-              href="tel:+919876543210"
+              href="tel:+919820507696"
               className="flex items-center space-x-3 p-3 rounded-lg bg-teal-50 hover:bg-teal-100 transition-colors"
             >
               <Phone className="h-5 w-5 text-teal-600" />
@@ -51,12 +51,12 @@ const FloatingCTA = () => {
               <Mail className="h-5 w-5 text-blue-600" />
               <div>
                 <div className="font-medium text-gray-900">Email Us</div>
-                <div className="text-sm text-gray-600">info@moznoadvisory.com</div>
+                <div className="text-sm text-gray-600">ceo@mozno.in</div>
               </div>
             </a>
             
             <a
-              href="https://wa.me/919876543210"
+              href="https://wa.me/919820507696"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center space-x-3 p-3 rounded-lg bg-teal-50 hover:bg-teal-100 transition-colors"
